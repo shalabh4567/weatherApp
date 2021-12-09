@@ -18,7 +18,7 @@ const SearchBar = () => {
         if (res.cod === 200) {
           setWeather(res);
           setVisible(true);
-        } else if (res.cod === 404) {
+        } else if (res.cod == 404) {
           setWeather(null);
           setVisible(true);
         }
@@ -26,7 +26,7 @@ const SearchBar = () => {
         setCityName("");
       })
       .catch((err) => {
-         console.log(err);
+        console.log(err);
         setErrors(err);
       });
   }
